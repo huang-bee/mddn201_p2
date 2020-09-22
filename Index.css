@@ -1,0 +1,38 @@
+.u-section-1 {background-image: none}
+.u-section-1 .u-sheet-1 {min-height: 1243px}
+.u-section-1 .u-image-1 {width: 91px; height: 84px; margin: 225px auto 0 177px}
+.u-section-1 .u-text-1 {font-family: "Red Hat Display"; font-size: 1.5rem; font-weight: bold; line-height: 30px; letter-spacing: normal; margin: 45px 278px 0 177px}
+.u-section-1 .u-line-1 {width: 864px; transform-origin: left center 0; margin: 20px 98px 0 auto}
+.u-section-1 .u-text-2 {font-weight: 300; font-size: 0.9375rem; margin: 10px 159px 0 177px}
+.u-section-1 .u-line-2 {width: 866px; transform-origin: left center 0; margin: 20px 98px 0 auto}
+.u-section-1 .u-text-3 {font-weight: 300; font-size: 0.9375rem; margin: 17px 171px 0 177px}
+.u-section-1 .u-btn-1 {border-style: none; letter-spacing: 0; background-image: none; font-weight: normal; text-transform: none; margin: -12px auto 60px 179px; padding: 6px 20px 7px} 
+
+@media (max-width: 1199px){ .u-section-1 .u-image-1 {width: 75px; margin-top: 133px; margin-left: 157px}
+.u-section-1 .u-text-1 {width: auto; margin-top: 26px; margin-right: 293px; margin-left: 157px}
+.u-section-1 .u-line-1 {width: 687px; transform-origin: right center 0; margin-top: 33px; margin-right: 96px}
+.u-section-1 .u-text-2 {width: auto; margin-right: 96px; margin-left: 157px}
+.u-section-1 .u-line-2 {width: 689px; transform-origin: right center 0; margin-top: 7px; margin-right: 94px}
+.u-section-1 .u-text-3 {width: auto; margin-right: 96px; margin-left: 157px}
+.u-section-1 .u-btn-1 {margin-top: -22px; margin-left: 157px} }
+
+@media (max-width: 991px){ .u-section-1 .u-image-1 {margin-top: 313px}
+.u-section-1 .u-text-1 {margin-top: -161px; margin-right: 278px; margin-left: 177px}
+.u-section-1 .u-line-1 {height: 3px; margin-right: 33px}
+.u-section-1 .u-text-2 {margin-right: 159px; margin-left: 177px}
+.u-section-1 .u-line-2 {height: 3px; margin-right: 31px}
+.u-section-1 .u-text-3 {margin-right: 0; margin-left: 33px}
+.u-section-1 .u-btn-1 {margin-left: 0; width: 119px} }
+
+@media (max-width: 767px){ .u-section-1 .u-image-1 {margin-top: 20px; margin-left: 233px}
+.u-section-1 .u-text-1 {margin-top: 20px; margin-left: 0}
+.u-section-1 .u-line-1 {width: 540px; margin-right: 0}
+.u-section-1 .u-line-2 {width: 540px; margin-right: 0}
+.u-section-1 .u-text-3 {margin-top: 20px; margin-left: 0}
+.u-section-1 .u-btn-1 {margin-top: 20px; margin-left: 198px} }
+
+@media (max-width: 575px){ .u-section-1 .u-image-1 {margin-top: 4338px}
+.u-section-1 .u-text-1 {margin-top: -4186px; margin-right: 178px}
+.u-section-1 .u-line-1 {width: 340px}
+.u-section-1 .u-line-2 {width: 340px}
+.u-section-1 .u-btn-1 {margin-bottom: 0} }
