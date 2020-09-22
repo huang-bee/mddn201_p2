@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="the end., your style, About Studio, About Our Perfect Team">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Trojans</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Trojans.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 2.25.0, nicepage.com">
+    
+    
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=text-font">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"url": "index.html",
+		"logo": "images/logo.png"
+}</script>
+    <meta property="og:title" content="Trojans">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  <style>
+/* The MIT License (MIT) Copyright (c) 2014 Toby */
+/* demo only */
+.flex { display: flex; }
+.align-center { justify-content: center; }
+.align-vert,.align-vert.align-center { align-items: center; }
+/* end demo */
+
+.modal { display: none; }
+.modal--show,
+.modal--hide { display: flex; } /* classes fired by js for animation control */
+
+/* This is on the wrapper for the whole modal */
+.modal--align {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.modal__container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px 20px 0px 20px;
+  margin: 12px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* As there is no href to avoid the hash being added to the URL when clicked we add a pointer */
+/* This 'x' is hidden from screen readers as there is an accessible close button in the modal */
+.modal__close--x:hover {
+  cursor: pointer;
+}
+
+/* Animations */
+/* Open */
+.modal.modal--show {
+  animation: modal-open 0.3s;
+}
+
+@keyframes modal-open {
+  0%    { opacity: 0; }
+  100%  { opacity: 1; }
+}
+
+/* Close */
+.modal.modal--hide {
+  animation: modal-close 0.3s;
+}
+
+@keyframes modal-close {
+  0%    { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+.modal__close--x {
+  position: absolute;
+  line-height: 19px;
+  top: 10px;
+  right: 10px; 
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  font-family: "Open Sans", "Arial","sans-serif";
+  opacity: .2;
+}
+
+.modal {
+  text-align: center;
+}
+</style>
+
+<style>
+    .modal__container [id*="sec-"] {
+        display: block !important;
+        overflow: hidden;
+    }
+    .modal__close--x {
+        z-index: 1;
+    }
+</style>
+
+<script>
+var buttonSelector = 'a[href*=sec][href*="-popup"]',
+    parseId = function (href) { return href.replace('-popup', '').replace('#', ''); };
+window.onload = function () {
+    $('body').on('click', buttonSelector, function (event) {
+        var id = parseId(event.currentTarget.getAttribute('href'));
+
+        var modalId = 'modal-' + id;
+        if ($('#' + modalId).length === 0) {
+            $('body').append('<div class="flex align-center align-vert modal modal--align" id="' + modalId + '">' +
+                '    <div class="modal__container">' +
+                '        <span class="modal__close modal__close--x" aria-hidden="true">×</span>' +
+                '        ' + document.getElementById(id).outerHTML +
+                '    </div>' +
+                '</div>');      
+        }
+        $('#' + modalId).addClass('modal--show');
+    });
+
+
+    var closeModal = function (modal) {
+        modal.removeClass('modal--show');
+        modal.addClass('modal--hide');
+
+        var afterAnimation = function () {
+            modal.removeClass('modal--hide');   
+        };
+
+        // This listens for the CSS animations to finish and then hides the modal
+        modal[0].addEventListener("webkitAnimationEnd", afterAnimation, false);
+        modal[0].addEventListener("oAnimationEnd", afterAnimation, false);
+        modal[0].addEventListener("msAnimationEnd", afterAnimation, false);
+        modal[0].addEventListener("animationend", afterAnimation, false);
+        setTimeout(afterAnimation, 400);
+    }
+
+    // Close the modal with any element with class 'modal__close'
+    $('body').on('click', '.modal__close', function (e) {
+        closeModal($(e.currentTarget).closest('.modal'));
+    });
+
+
+    // Click outside of the modal and close it
+    window.onclick = function (e) {
+        if ($(e.target).is('.modal')) {
+            closeModal($(e.target));
+        }
+    }
+
+    // Use the escape key to close modal
+    document.onkeyup = function (e) {
+        e = e || window.event;
+        if (e.keyCode == 27 && $('.modal--show').length === 1) {
+            closeModal($('.modal--show'));
+        }
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var buttons = document.querySelectorAll(buttonSelector);
+    for (var i = 0; i < buttons.length; i++) {
+        var section = document.getElementById(parseId(buttons[i].getAttribute('href')));
+        if (section) {
+            section.style.display = 'none';
+        }       
+    }
+});
+</script></head>
+  <body class="u-body u-overlap"><header class="u-clearfix u-header u-header" id="sec-6330"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+          <img src="images/logo.png" class="u-logo-image u-logo-image-1" data-image-width="36.1667">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-white u-text-grey-40 u-text-hover-grey-70" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-grey-40 u-text-hover-grey-70" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-grey-40 u-text-hover-grey-70" href="Interactive.html" style="padding: 10px 20px;">Interactive</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Interactive.html" style="padding: 10px 20px;">Interactive</a>
+</li></ul>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="carousel_0cb6">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h5 class="u-text u-text-custom-color-5 u-text-default u-text-1">TROJANS</h5>
+        <span class="u-icon u-icon-circle u-text-custom-color-5 u-icon-1">
+          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5264"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-5264" style="enable-background:new 0 0 512 512;"><g><g><polygon points="407.054,74.643 349.903,74.643 412.762,512 479.612,512   "></polygon>
+</g>
+</g><g><g><polygon points="156.368,336.25 128.158,512 382.458,512 308.868,0 264.718,0 240.718,74.64 211.658,74.64 32.388,232.13     84.688,329.74 161.178,306.25 245.128,306.25 245.128,336.25   "></polygon>
+</g>
+</g></svg>
+        </span>
+        <h4 class="u-text u-text-2">The name trojan is derived from 'trojan horse'. It is a type of code or software that can gain control of your computer.<br>
+          <br>Trojans require the user to execute the code by disguising itself as a legitimate software. Once the software is launched and running the malware can disrupt, steal and inflict damage to your system or network.
+        </h4>
+        <h2 class="u-text u-text-default u-text-3" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="10000" data-animation-delay="0">1110110101010<br>
+        </h2>
+        <h2 class="u-text u-text-default u-text-4">10001001100011111111110</h2>
+        <h2 class="u-text u-text-default u-text-5">101001001100011111100011110</h2>
+        <h2 class="u-text u-text-default u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="10000" data-animation-delay="0">11010101011<br>
+        </h2>
+        <h2 class="u-text u-text-custom-color-5 u-text-default u-text-7" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="10000" data-animation-delay="0">1100011111010<br>
+        </h2>
+        <h2 class="u-text u-text-default u-text-8">1000100111000011111100011110</h2>
+        <h2 class="u-text u-text-default u-text-9">10101100110</h2>
+        <a href="#sec-6089" class="u-border-radius-3 u-btn u-btn-round u-button-style u-custom-color-5 u-hover-custom-color-6 u-text-body-alt-color u-text-hover-white u-btn-1">Escape Trojan&nbsp;​&nbsp;<span class="u-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 240.811 240.811" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path id="Expand_More" d="M220.088,57.667l-99.671,99.695L20.746,57.655c-4.752-4.752-12.439-4.752-17.191,0   c-4.74,4.752-4.74,12.451,0,17.203l108.261,108.297l0,0l0,0c4.74,4.752,12.439,4.752,17.179,0L237.256,74.859   c4.74-4.752,4.74-12.463,0-17.215C232.528,52.915,224.828,52.915,220.088,57.667z"></path>
+</g></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="u-clearfix u-custom-color-6 u-section-2" id="sec-6089">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-shape u-shape-svg u-text-custom-color-5 u-shape-1">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0c37"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-0c37" style="enable-background:new 0 0 160 160;"><path d="M151.7,132.5c-3.4,6-7.9,11.7-13.3,16.5c-29.2,26.1-54.1-2.3-88.2-3S0,109.5,0,91.6s14.8-31.3,25.3-45.3S33.4,11,51.8,3
+	c15.3-6.6,33.6-0.4,51.6,0.7c11.2,0.7,28.8-3.8,38.2,0.4s11.8,15.4,9.2,22.8c-1.9,5.4-5.5,11.6-12.8,16.5
+	c-9.3,10.1-4.7,22.9,3.7,33.4c7.8,9.7,17.7,11.7,18.3,23.5C160.4,110.8,157.6,122.2,151.7,132.5L151.7,132.5z"></path></svg>
+        </div>
+        <h1 class="u-heading-font u-text u-text-default u-title u-text-1">How do trojans attack?</h1>
+        <p class="u-custom-font u-heading-font u-text u-text-custom-color-4 u-text-2">In suscipit erat convallis eros vulputate, sed hendrerit libero efficitur. Nam sit amet maximus justo, a varius est. Praesent consequat ipsum vel ante pellentesque dictum. Ut velit ligula, finibus vitae lorem eu, pellentesque pulvinar ante. Nunc tellus erat, fermentum non elit at, imperdiet sagittis purus. Nam nec lectus tincidunt quam elementum congue et eget nunc. Mauris porta interdum tincidunt. Suspendisse ante libero, dapibus nec blandit ut, faucibus vitae ipsum. Fusce eleifend turpis vel condimentum laoreet. Duis in eros scelerisque, fermentum libero sit amet, tincidunt magna. Etiam nec posuere eros. Quisque non commodo dui, vel ultrices nisl. Vivamus quis nisi luctus, interdum leo non, finibus enim. Donec maximus suscipit mauris vel facilisis. Ut bibendum, nunc quis eleifend lacinia, urna mi imperdiet orci, quis condimentum libero sapien a massa.&nbsp;<br>
+          <br>
+          <br>Curabitur vulputate neque dolor.Phasellus vitae laoreet enim. In luctus sagittis metus in suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam quam mi, blandit ut nibh et, pharetra ullamcorper nunc. Fusce sodales suscipit vehicula. Ut rhoncus ac est eu congue. Maecenas in nunc eu est rutrum sagittis vitae a purus. Fusce maximus hendrerit vehicula. Curabitur semper vestibulum eros sit amet sagittis. Nulla vel neque feugiat, sollicitudin turpis gravida, suscipit magna. Aliquam aliquet massa ut ante ultrices, quis luctus ipsum egestas. In non vehicula justo. Nullam nec erat a orci auctor facilisis id a urna. Proin vulputate tempus maximus. Cras et scelerisque nisl, id laoreet ligula.
+        </p>
+        <span class="u-icon u-icon-circle u-text-grey-90 u-icon-1">
+          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-79c9"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-79c9"><g><g><path d="m78.955 456.944h-20.308c-16.069 0-30.307-8.392-38.087-22.45-7.782-14.061-7.331-30.587 1.206-44.208l197.343-314.815c8.015-12.783 21.807-20.414 36.891-20.414s28.875 7.631 36.89 20.413l63.651 101.546c2.2 3.509 6.829 4.57 10.337 2.371 3.509-2.2 4.571-6.828 2.371-10.337l-63.652-101.547c-10.776-17.185-29.317-27.445-49.597-27.445s-38.821 10.26-49.598 27.445l-197.343 314.818c-11.477 18.312-12.083 40.531-1.621 59.435 10.46 18.901 29.604 30.186 51.209 30.186h20.307c4.142 0 7.499-3.357 7.499-7.499s-3.357-7.499-7.498-7.499z"></path><path d="m502.94 382.32-115.104-183.624c-2.199-3.509-6.827-4.573-10.336-2.371-3.509 2.199-4.571 6.827-2.371 10.336l115.104 183.624c8.537 13.621 8.988 30.148 1.207 44.208-7.78 14.058-22.018 22.45-38.087 22.45h-339.403c-4.142 0-7.499 3.357-7.499 7.499s3.357 7.499 7.499 7.499h339.403c21.605 0 40.749-11.285 51.209-30.186 10.462-18.904 9.856-41.122-1.622-59.435z"></path><path d="m161.058 381.825c-3.187 0-6.025 2.014-7.078 5.022l-5.313 15.179h-2.546c-3.144-9.38-12.009-16.161-22.434-16.161-13.046 0-23.659 10.614-23.659 23.66s10.614 23.659 23.659 23.659c10.425 0 19.29-6.78 22.434-16.16h7.866c3.187 0 6.025-2.014 7.078-5.022l5.313-15.179 72.124-.001c4.142 0 7.499-3.357 7.499-7.499s-3.357-7.499-7.499-7.499h-49.353v-20.797c0-7.878 2.195-15.594 6.346-22.31 4.143-6.695 10.07-12.097 17.135-15.621 17.398-8.668 28.941-25.139 31.325-44.043l5.229 1.307c2.757.69 5.567 1.029 8.366 1.029 6.774 0 13.482-1.988 19.207-5.804 9.644-6.429 15.401-17.187 15.401-28.777v-3.863c0-4.142-3.357-7.499-7.499-7.499s-7.499 3.357-7.499 7.499v3.863c0 6.564-3.261 12.657-8.722 16.298-4.582 3.055-10.273 4.04-15.616 2.705l-14.079-3.52-.002.007c-1.218-.305-2.506-.315-3.751.018l-50.18 13.383-12.175-16.23 54.686-50.489c1.5-1.385 2.37-3.32 2.411-5.361.041-2.04-.752-4.009-2.195-5.452l-13.281-13.281c11.819-9.44 26.366-14.489 41.781-14.302 35.943.401 65.184 30.399 65.184 66.872v144.37h-47.723c-4.142 0-7.499 3.357-7.499 7.499s3.357 7.499 7.499 7.499l72.124.001 5.313 15.179c1.053 3.008 3.892 5.022 7.078 5.022h7.866c3.144 9.38 12.009 16.16 22.434 16.16 13.046 0 23.659-10.614 23.659-23.659 0-13.046-10.614-23.66-23.659-23.66-10.425 0-19.29 6.781-22.434 16.161h-2.546l-5.313-15.179c-1.053-3.008-3.892-5.022-7.078-5.022h-14.723v-19.343h61.981c3.144 9.38 12.009 16.16 22.434 16.16 13.046 0 23.659-10.614 23.659-23.659s-10.614-23.659-23.659-23.659c-10.425 0-19.29 6.78-22.434 16.16h-61.981v-19.343h14.723c3.187 0 6.025-2.014 7.078-5.022l5.313-15.179h2.546c3.144 9.38 12.009 16.16 22.434 16.16 13.046 0 23.659-10.614 23.659-23.659s-10.614-23.659-23.659-23.659c-10.425 0-19.29 6.78-22.434 16.16h-7.866c-3.187 0-6.025 2.014-7.078 5.022l-5.313 15.179h-9.402v-75.69c0-44.651-35.894-81.377-80.015-81.869-21.976-.252-42.63 8.173-58.151 23.705-2.927 2.929-2.926 7.675.002 10.603l13.359 13.359-53.928 49.788c-2.826 2.609-3.22 6.933-.912 10.01l19.277 25.697c1.836 2.447 4.973 3.533 7.931 2.746l44.937-11.985c-2.381 12.963-10.659 24.125-22.781 30.164-2.08 1.037-4.081 2.202-6.006 3.471h-33.555l-5.313-15.179c-1.053-3.008-3.892-5.022-7.078-5.022h-7.866c-3.144-9.38-12.009-16.16-22.434-16.16-13.046 0-23.659 10.614-23.659 23.659s10.614 23.659 23.659 23.659c10.425 0 19.29-6.78 22.434-16.16h2.546l5.313 15.179c1.053 3.008 3.892 5.022 7.078 5.022h23.46c-.614.879-1.212 1.771-1.778 2.686-3.203 5.183-5.542 10.805-6.964 16.657h-61.976c-3.144-9.38-12.009-16.16-22.434-16.16-13.046 0-23.659 10.614-23.659 23.659s10.614 23.659 23.659 23.659c10.425 0 19.29-6.78 22.434-16.16h60.351v19.343h-13.093zm-37.371 36.361c-4.776 0-8.661-3.886-8.661-8.661 0-4.776 3.886-8.662 8.661-8.662 4.776 0 8.661 3.886 8.661 8.662.001 4.776-3.885 8.661-8.661 8.661zm264.626-17.323c4.776 0 8.661 3.886 8.661 8.662s-3.886 8.661-8.661 8.661c-4.776 0-8.661-3.886-8.661-8.661-.001-4.776 3.885-8.662 8.661-8.662zm32.321-54.541c4.776 0 8.661 3.886 8.661 8.661 0 4.776-3.886 8.661-8.661 8.661-4.776 0-8.661-3.886-8.661-8.661-.001-4.775 3.885-8.661 8.661-8.661zm-32.321-54.541c4.776 0 8.661 3.886 8.661 8.661 0 4.776-3.886 8.661-8.661 8.661-4.776 0-8.661-3.886-8.661-8.661-.001-4.775 3.885-8.661 8.661-8.661zm-264.626 17.323c-4.776 0-8.661-3.886-8.661-8.661 0-4.776 3.886-8.661 8.661-8.661 4.776 0 8.661 3.886 8.661 8.661.001 4.775-3.885 8.661-8.661 8.661zm-32.32 54.541c-4.776 0-8.661-3.886-8.661-8.661 0-4.776 3.886-8.661 8.661-8.661 4.776 0 8.661 3.886 8.661 8.661s-3.886 8.661-8.661 8.661z"></path>
+</g>
+</g></svg>
+        </span>
+        <span class="u-custom-color-5 u-icon u-icon-circle u-spacing-10 u-icon-2" data-href="#carousel_228d">
+          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3a69"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-3a69" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M377.749,228.416    L271.083,335.083c-4.16,4.16-9.621,6.251-15.083,6.251c-5.462,0-10.923-2.091-15.083-6.251L134.251,228.416    c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0L256,289.835l91.584-91.584c8.341-8.341,21.824-8.341,30.165,0    C386.091,206.592,386.091,220.075,377.749,228.416z"></path>
+</g>
+</g></svg>
+        </span>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-custom-color-5 u-section-3" id="carousel_228d">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-shape u-shape-svg u-text-custom-color-6 u-shape-1">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-dbbb"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-dbbb" style="enable-background:new 0 0 160 160;"><path d="M10.3,39.9c-18.2,24.9-9.2,62.5,4,87.4c8.2,15.4,23,36.1,48.6,32.2c5.8-0.9,11.1-3.2,16.9-4.3c17.8-3.4,37.9,4.7,54.5-1.5
+	c6.6-2.5,11.6-6.9,15.5-11.8c12.2-15.3,13.7-35.6,3.8-51.9c-6.9-11.5-19-20.9-23.6-33.1c-4.5-11.9-1.4-24.9-4.7-37.1
+	C121.1,5,103.7-5.6,85.7,3.1c-6.8,3.3-12.6,7.7-20,10.2C58,15.9,49.5,16.6,41.6,19C26.8,23.6,16.7,31,10.3,39.9z"></path></svg>
+        </div>
+        <div class="u-container-style u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h2 class="u-align-center u-custom-font u-heading-font u-text u-text-1">The <font class="u-text-custom-color-6">Different</font> Types of Trojans
+            </h2>
+          </div>
+        </div>
+        <div class="u-list u-repeater u-list-1">
+          <div class="u-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+              <h4 class="u-text u-text-grey-90 u-text-2">Trojan Instant Messaging &amp; SMS</h4>
+              <p class="u-text u-text-custom-color-10 u-text-3">This trojan targets instant messaging softwares to steal passwords and login details. If you mobile device is infected, trojan can send and intercept text messages.</p>
+            </div>
+          </div>
+          <div class="u-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+            <div class="u-container-layout u-similar-container u-container-layout-3">
+              <h4 class="u-text u-text-grey-90 u-text-4">Trojan Banker</h4>
+              <p class="u-text u-text-custom-color-10 u-text-5">The aim of this trojan is to steal information from financial accounts. It is designed to steal your online account information which includes banking, credit card and others.</p>
+            </div>
+          </div>
+          <div class="u-align-left u-container-style u-list-item u-repeater-item u-white u-list-item-3">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
+              <h4 class="u-text u-text-grey-90 u-text-6">Rootkit Trojan</h4>
+              <p class="u-text u-text-custom-color-10 u-text-7">The rootkit trojan hides or moves files and documents on your computer. The purpose is to extend the time that the trojan program runs on your device.</p>
+            </div>
+          </div>
+          <div class="u-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+            <div class="u-container-layout u-similar-container u-container-layout-5">
+              <h4 class="u-text u-text-grey-90 u-text-8">Fake AV Trojan</h4>
+              <p class="u-text u-text-custom-color-10 u-text-9">This trojan pretends to be an anti-virus software but demands money from you to detect and remove threats. This fake software will most likely not remove any malware on your computer.</p>
+            </div>
+          </div>
+          <div class="u-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+            <div class="u-container-layout u-similar-container u-container-layout-6">
+              <h4 class="u-text u-text-grey-90 u-text-10">Backdoor Trojan</h4>
+              <p class="u-text u-text-custom-color-10 u-text-11">This trojan creates a backdoor to your computer. This allows the cyber attacker to access your computer and control it. Your data is vulnerable and more malware can be uploaded to your device.</p>
+            </div>
+          </div>
+          <div class="u-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+            <div class="u-container-layout u-similar-container u-container-layout-6">
+              <h4 class="u-text u-text-grey-90 u-text-10">Distributed Denial of Service Trojan</h4>
+              <p class="u-text u-text-custom-color-10 u-text-11">Also known as DDosing, this attack takes down networks by flooding it with traffic. The traffic comes from your computer and surrounding devices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-custom-color-4 u-section-4" id="carousel_ae75">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-shape u-shape-rectangle u-white u-shape-1"></div>
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-right-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <div class="u-shape u-shape-svg u-text-white u-shape-2">
+                    <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 120" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-153f"></use></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 160 120" x="0px" y="0px" id="svg-153f"><path d="M123.5,101.6c4.3-14.8,9-30.9,21.1-40.5c13.9-11,26.3-39.2-0.3-54.7C93.1-23.4-20.4,58.6,3.2,86c22.4,26,59.4-9.3,68.1,12.4
+	c4.4,11.1,20.2,26.2,36.7,20.3C116.2,115.8,121.4,109.1,123.5,101.6z"></path></svg>
+                  </div>
+                  <h1 class="u-align-center u-text u-text-custom-color-5 u-title u-text-1">Protect Against Trojans</h1>
+                  <span class="u-icon u-icon-circle u-text-custom-color-6 u-icon-1">
+                    <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4ab6"></use></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-4ab6"><g><path d="m499.499 403.235c-5.273-5.265-11.683-8.971-18.671-10.916.737-5.453 1.429-10.852 2.058-16.114 10.485-87.381 10.519-175.966.101-263.293-2.551-21.355-19.986-37.959-41.46-39.482-14.362-1.012-28.758-1.901-42.932-2.666-.446-.649-.998-1.24-1.661-1.74-.655-.494-16.34-12.203-41.681-21.607-42.453-15.754-78.222-12.495-100.754-6.989-4.023.983-6.488 5.042-5.505 9.066.984 4.024 5.044 6.488 9.066 5.505 6.107-1.493 12.12-2.535 18.011-3.2v13.291c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-14.204c22.363-.216 42.424 4.629 58.411 10.496l-13.791 29.337c-1.762 3.749-.152 8.216 3.597 9.978 1.031.485 2.117.714 3.186.714 2.816 0 5.515-1.594 6.792-4.311l14.094-29.981c7.854 3.625 14.075 7.158 18.289 9.753l-27.99 37.313c-9.685-7.219-20.918-12.214-32.788-14.536l7.432-18.38c.896-2.215.682-4.725-.575-6.757s-3.408-3.344-5.79-3.531c-.684-.054-16.953-1.247-34.711 4.868-12.566 4.327-22.732 11.188-30.282 20.302-10.329 1.474-20.335 4.328-29.861 8.517l-8.266-16.358c-1.869-3.697-6.38-5.18-10.077-3.311-3.697 1.868-5.179 6.38-3.311 10.076l8.341 16.505c-8.653 5.22-16.501 11.496-23.395 18.657l-7.068-7.068c-2.929-2.929-7.678-2.929-10.606 0-2.929 2.929-2.929 7.677 0 10.606l7.974 7.974c-6.789 9.231-12.216 19.517-16.043 30.601l-23.992 69.421c.021-25.444 2.396-48.781 7.137-69.68 9.331-41.138 27.712-71.747 54.633-90.976 9.26-6.615 18.903-12.235 28.663-16.703 3.766-1.724 5.421-6.175 3.697-9.941-1.725-3.767-6.176-5.422-9.941-3.697-9.961 4.561-19.786 10.221-29.244 16.816-41.525.949-83.603 2.909-125.114 5.84-21.471 1.522-38.906 18.126-41.457 39.483-10.418 87.326-10.385 175.91.101 263.289.63 5.269 1.322 10.674 2.06 16.132-17.963 5.039-31.176 21.545-31.176 41.089 0 11.393 4.437 22.11 12.497 30.183 8.065 8.065 18.788 12.507 30.193 12.507h426.62c23.539 0 42.69-19.151 42.69-42.69 0-11.392-4.437-22.11-12.501-30.188zm-204.379-128.945 21.334 36.451c6.596 11.261 18.792 18.055 31.593 18.055 2.014 0 4.043-.168 6.067-.513l20.267-3.461c15.556-2.651 26.389-17.018 24.662-32.708l-13.482-122.203c-1.875-16.998-9.196-33.06-20.719-45.636l.036-.049c21.438.891 43.066 2.057 64.449 3.492 8.586 77.166 8.583 155.44-.012 232.857-44.471 2.989-89.543 4.832-134.196 5.517v-91.802zm-67.957-153.036c6.278-3.267 12.832-5.816 19.586-7.673-1.678 4.281-2.983 8.849-3.896 13.696-.767 4.071 1.912 7.992 5.982 8.759 4.072.767 7.992-1.912 8.759-5.982 6.573-34.903 36.305-42.427 52.553-43.895l-18.092 44.741c-1.553 3.84.301 8.212 4.142 9.765.921.373 1.873.549 2.809.549 2.966 0 5.775-1.772 6.956-4.69l9.159-22.651c13.767 2.057 26.655 8.499 36.557 18.334 10.598 10.527 17.336 24.502 18.975 39.349l13.481 122.201c.65 5.899-2.271 11.418-7.074 14.335.07-2.387-.291-4.823-1.164-7.198-1.779-4.836-5.335-8.69-10.013-10.852s-9.917-2.372-14.754-.594c-3.888 1.43-5.879 5.741-4.45 9.628 1.431 3.887 5.738 5.879 9.628 4.45 2.222-.817 4.694.325 5.51 2.546.817 2.221-.326 4.693-2.547 5.51-1.604.59-4.555 1.142-7.367 1.861l-.312.053c-8.776 1.496-17.696-2.657-22.192-10.334l-25.466-43.51c-1.345-2.299-3.809-3.711-6.473-3.711h-9.843c-19.072 0-34.588-15.516-34.588-34.588v-20.227c0-4.142-3.358-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v20.227c0 24.795 18.293 45.397 42.091 49.022v95.918c-8.205.078-16.291.119-24.12.119-27.38 0-55.207-.453-82.711-1.346-19.365-.619-38.994-1.485-58.505-2.554l50.778-146.93h19.958c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-14.774l5.619-16.26h38.414c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-32.832c9.152-20.658 24.951-37.543 45.216-48.068zm-94.015 47.52c-7.322 32.281-9.298 69.873-5.897 111.739l-28.033 81.115c-5.424-.327-10.952-.68-16.534-1.054-8.595-77.417-8.598-155.691-.012-232.857 21.588-1.45 43.612-2.642 65.701-3.566-6.418 13.345-11.506 28.23-15.225 44.623zm336.162 292.339h-426.62c-7.399 0-14.355-2.881-19.583-8.109-5.228-5.236-8.107-12.19-8.107-19.581 0-15.263 12.422-27.68 27.69-27.68h139.982c3.275 15.956 16.9 27.872 33.679 28.579 13.181.562 26.521.847 39.649.847s26.469-.285 39.646-.847c16.764-.706 30.377-12.597 33.674-28.579h84.301c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-367.527c-.749-5.526-1.45-10.995-2.088-16.326-10.344-86.199-10.377-173.584-.1-259.727 1.699-14.224 13.316-25.284 27.621-26.298 34.976-2.47 70.355-4.24 105.463-5.3-7.56 7.577-14.306 16.155-20.224 25.711-27.374 1.052-54.724 2.519-81.358 4.375-3.598.251-6.507 3.026-6.927 6.608-9.665 82.378-9.661 166.058.009 248.715.419 3.583 3.33 6.36 6.929 6.61 9.72.676 19.341 1.29 28.598 1.825.028.002.056.003.084.004 22.851 1.34 45.966 2.388 68.705 3.114 27.662.898 55.652 1.354 83.194 1.354 10.238 0 20.908-.067 31.713-.2 49.496-.612 99.583-2.664 148.869-6.098 3.598-.251 6.508-3.028 6.928-6.61 9.67-82.658 9.674-166.337.009-248.715-.42-3.582-3.33-6.357-6.928-6.608-20.134-1.402-40.523-2.564-60.808-3.49l18.12-24.155c15.338.805 30.975 1.76 46.567 2.858 14.307 1.014 25.924 12.074 27.623 26.297 10.277 86.144 10.244 173.529-.1 259.731-.638 5.328-1.338 10.797-2.088 16.323h-22.305c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h25.71c7.397 0 14.354 2.879 19.583 8.099 5.228 5.237 8.107 12.191 8.107 19.582 0 15.269-12.422 27.691-27.69 27.691zm-271.077-55.37h115.52c-2.86 7.722-10.071 13.228-18.743 13.593-12.969.553-26.094.833-39.011.833s-26.042-.28-39.014-.833c-8.682-.366-15.903-5.888-18.752-13.593z"></path><path d="m306.051 194.359 17.183 9.205-10.459 4.084c-3.858 1.506-5.765 5.856-4.258 9.714 1.157 2.962 3.989 4.774 6.988 4.774.907 0 1.83-.166 2.726-.516l25.611-10c2.726-1.064 4.584-3.617 4.759-6.538s-1.366-5.677-3.945-7.06l-31.521-16.886c-3.65-1.954-8.196-.582-10.153 3.07-1.956 3.651-.582 8.197 3.069 10.153z"></path><path d="m196.162 282.388c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h11.565v22.245h-59.451c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h85.13c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-10.679v-22.245h34.622c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5z"></path>
+</g></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="u-align-left u-custom-font u-heading-font u-spacing-4 u-text u-text-2">
+          <li style=""><b>Keep your operating system up to date </b>- cyberattackers tend to exploit security holes in outdated softwares.
+          </li>
+          <li style=""><b>Be careful with email attachments</b> - if the email seems suspicious it's better to avoid it.
+          </li>
+          <li style=""><b>Don't visit risky sites</b> - chrome will alert you if the web page you're about to visit is unsafe.
+          </li>
+          <li style=""><b>Have complex passwords</b> - create a unique password for each account
+          </li>
+          <li style=""><b>Back up files regularly</b> - If your computer does get infected, you will have a back up.
+          </li>
+          <li style=""><b>Don't open a link in an email</b> - most trojans attach themselves to these links, only open them if you know exactly what they are
+          </li>
+          <li style=""><b>Keep personal infromation safe with firewalls</b> - firewalls monitor traffic, blocks trojans and hackers.
+          </li>
+        </ul>
+        <span class="u-icon u-icon-circle u-text-custom-color-6 u-icon-2">
+          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-227a"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-227a"><path d="m495.995 218.733-1.81-154.92c-.089-7.579-5.532-14.065-12.97-15.524-7.134-1.398-104.774 5.679-218.514-46.816-4.255-1.964-9.155-1.964-13.41 0-67.832 31.307-139.456 46.517-217.295 46.517-8.836 0-16 7.164-16 16v154.93c0 140.598 98.232 263.063 236.647 292.725 2.207.473 4.495.474 6.705 0 140.869-30.187 237.717-156.01 236.647-292.912zm-239.999 260.881c-120.731-27.517-208-136.599-208-260.694v-139.035c71.305-1.428 142.847-17.351 208-46.32 64.662 28.75 135.605 44.651 206.374 46.285l1.626 139.161c-.043 124.058-87.299 233.093-208 260.603z"></path><path d="m335.996 208h-16v-24c0-35.29-28.71-64-64-64s-64 28.71-64 64v24h-16c-8.836 0-16 7.164-16 16v128c0 8.836 7.164 16 16 16h160c8.836 0 16-7.164 16-16v-128c0-8.836-7.163-16-16-16zm-112-24c0-17.645 14.355-32 32-32s32 14.355 32 32v24h-64zm96 152h-128v-96h128z"></path><path d="m255.996 264c-8.836 0-16 7.164-16 16v16c0 8.836 7.164 16 16 16s16-7.164 16-16v-16c0-8.836-7.163-16-16-16z"></path></svg>
+        </span>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0d5c"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">.exe © 2020 bee huang mddn201 p2</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+        <span>HTML Template</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/html" target="_blank">
+        <span>Nicepage</span>
+      </a>. 
+    </section>
+  </body>
+</html>
